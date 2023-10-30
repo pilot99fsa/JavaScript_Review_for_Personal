@@ -1,0 +1,6 @@
+JavaScript
+・・・ECMAScriptの仕様に基づいて実装されているプログラミング言語のこと、環境によって使える機能が変わる
+
+年によってバージョンが変わる、ES6(ES2015)など
+
+ECMAScriptのWEBサイトで詳しく見れる　https://www.ecma-international.org/

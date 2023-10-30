@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>年齢による条件分岐の表示</title>
+  </head>
+  <body>
+    <h1>年齢による条件分岐の表示</h1>
+
+    <p id="result">結果はここに表示されます。</p>
+
+    <script>
+      const userInformation = {
+        name: 'John',
+        age: 70,
+      };
+
+      let message;
+
+      if (userInformation.age < 18) {
+        message = `${userInformation.name} さんは未成年です。`;
+      } else if (userInformation.age >= 18 && userInformation.age < 65) {
+        message = `${userInformation.name} さんは成人で、特別な制限はありません。`;
+      } else {
+        message = `${userInformation.name} さんは高齢者で、特別なプロモーションがあります。`;
+      }
+
+      // 結果をHTMLに表示
+      const resultElement = document.getElementById('result');
+      resultElement.textContent = message;
+    </script>
+  </body>
+</html>
