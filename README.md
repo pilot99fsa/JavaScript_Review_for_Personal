@@ -1,1 +1,9 @@
 # JavaScript_Review_for_Personal
+JavaScript学習記録を残す為のリポジトリ、ブラウザ上で編集しすぎてローカルファイルとの相違が多すぎたので再プッシュ
+
+JavaScript_Training
+こちらはJSでコードを自分で色々試した結果の記録
+
+JavaScript_Tutorial
+こちらはUdemyで学習中の講座「【JS】ガチで学びたい人のためのJavaScriptメカニズム」
+の学習記録、動画で学んだこと以外にも自分で掘り下げて学んだことも記録しています。
