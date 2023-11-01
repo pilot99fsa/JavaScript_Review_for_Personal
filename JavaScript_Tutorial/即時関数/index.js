@@ -44,7 +44,7 @@ let c = (function () {
 console.log(c) //コンソールで結果を確認すると0と表示される
 
 //
-let d = (function (f) { //51行目で受け取った引数の51がfに代入される
+let d = (function (f) { //51行目で受け取った引数の10がfに代入される
     console.log("called" + f) //コンソールに called 10 と表示される
     return 0;
 })(10) //引数として10を渡す
