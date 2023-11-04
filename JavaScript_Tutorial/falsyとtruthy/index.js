@@ -54,7 +54,7 @@ if (1) { //引数の前にnot演算子(!)をつけ、これに続く変数が1�
 if (!e) { //引数の前にnot演算子(!)をつけ、これに続く変数がtrueの場合はfalseに変換し、falseであればtrueに変換する
     console.log("Hello") //eはfalseであるためtrueが返ってくる
 } else {
-    console.log("bye") //falseであれば"bye"が実行される
+    console.log("bye") //tureであればfalseが実行される
 }
 
 //0だけは無条件でfalse判定されるので要注意である
