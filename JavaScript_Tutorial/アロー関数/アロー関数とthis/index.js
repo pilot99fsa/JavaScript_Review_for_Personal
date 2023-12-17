@@ -19,6 +19,28 @@ const person2 = {
     }
 }
 person2.hello2()
+
 //コンソールにはHello Johnと表示される
 // アロー関数はthisを取らない
 // レキシカルスコープに探しに行き、windowオブジェクトを見つけた為、Johnと表示される
+
+const a = () => console.log('Bye' + this.name) // コンソールにはByeJoohn
+// この関数のレキシカルスコープからのスコープはグローバルスコープとなる。
+// グローバルスコープのthisはwindowオブジェクトになるので、3行目のwindow.name = 'John'が適用される
+
+const person3 = {
+    name: 'Tom',
+    hello3() {
+        console.log('Hello' + this.name) //コンソールにはHelloTom
+        a() //実行すると27行目のコードが実行される。
+        const b = () => console.log('Bye' + this.name)
+        b() //この場合はByeTomと表示される
+    }
+}
+person3.hello3()
+
+function c() {
+    console.log('Hello' + this.name)
+    a()
+}
+c() //コンソールにはByeJohnと表示される
