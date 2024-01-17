@@ -1,0 +1,30 @@
+.circles {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #a6ddcb;
+}
+.circles > .circle {
+  position: absolute;
+  border-radius: 50%;
+}
+.circles > .circle.circle1 {
+  background-color: green;
+  width: 630px;
+  height: 630px;
+  margin: -315px 0 0 -315px;
+}
+.circles > .circle.circle2 {
+  background-color: red;
+  width: 420px;
+  height: 420px;
+  z-index: 1;
+  margin: -220px 0 0 -220px;
+}
+.circles > .circle.circle3 {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  margin: -100px 0 0 -100px;
+}/*# sourceMappingURL=style.css.map */
