@@ -1,8 +1,23 @@
+.cursor {
+  position: fixed;
+  background-color: purple;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: -7.5px 0 0 -7.5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 5;
+}
+
 .circles {
   position: relative;
   height: 100vh;
   width: 100vw;
   background-color: #a6ddcb;
+  overflow: hidden;
 }
 .circles > .circle {
   position: absolute;
@@ -27,4 +42,21 @@
   height: 200px;
   z-index: 2;
   margin: -100px 0 0 -100px;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  mix-blend-mode: screen;
+  z-index: 4;
+}
+.content h1 {
+  font-size: 9rem;
 }/*# sourceMappingURL=style.css.map */
