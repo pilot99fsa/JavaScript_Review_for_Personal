@@ -3,13 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!-- スタイルCSS style.css -->
     <link rel="stylesheet" href="style.css" />
     <title>Three.js練習</title>
   </head>
   <body>
+    <!-- ヘッダー header -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Three.js</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- メイン -->
+    <main>
+      <h1>LensFlares Website</h1>
+      <h3>Dive into another skill</h3>
+    </main>
+
+    <!-- FlyControls.jsのインポート先を変更する -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./build/three.module.js",
+          "three/examples/jsm/": "./jsm/"
+        }
+      }
+    </script>
     <!-- ローカルJavaScriptファイル script.js -->
     <!-- <script src="script.js" type="module"></script> -->
-    <script src="script_2.js" type="module"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
