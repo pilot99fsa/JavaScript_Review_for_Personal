@@ -23,4 +23,8 @@ console.log(str)
 
 String.prototype[s] = function () {
     // ビルトインオブジェクトのprototypeを拡張するのはprototype汚染と呼ばれており、一般的には推奨されない
+    return 'hello ' + this;
 }
+
+const tom = 'Tom';
+console.log(tom[s]())
