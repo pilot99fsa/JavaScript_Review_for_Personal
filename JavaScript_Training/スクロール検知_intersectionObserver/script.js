@@ -2,7 +2,7 @@
 
 const child = document.querySelector('.child') // 監視したい要素を取得して変数に格納する
 
-const cb = function (entries, observe) {
+const callBack = function (entries, observe) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             console.log('inview') // 要素が画面内に映るとinviewと出力
@@ -22,10 +22,15 @@ const cb = function (entries, observe) {
 
     // よく使うオプションについて
     const options = {
-        root: null,
-        rootMargin: "-100px 0px 0px 0px"
+        root: null, // 監視するベースとなる要素を指定します。 初期値はビューポート（表示されている画面領域のこと）である。
+        // rootは実務では変更することはあまりない
+        rootMargin: "-300px 0px -300px 0px", // 指定しなければ初期値は0。marginと同じで上右下左の順に設定できる。
+        threshold: 0 // 初期値は0,交差の閾値を指定するためのである。交差を検出するために要素がビューポート内にどの程度入る必要があるかを定義する。
+
+
     }
 }
-const io = new IntersectionObserver(cb) // コールバック関数を渡す。IntersectionObserver コンストラクタは、交差を監視する新しい IntersectionObserver オブジェクトを作成する
+const io = new IntersectionObserver(callBack, options) // コールバック関数を渡す。IntersectionObserver コンストラクタは、交差を監視する新しい IntersectionObserver オブジェクトを作成する
+// 第2引数はオプション
 
 io.observe(child) // ioに監視したい対象を登録する
