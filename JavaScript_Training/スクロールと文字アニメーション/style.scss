@@ -13,11 +13,11 @@ section {
   height: 100vh;
   background-color: teal;
 
-  // 2つ目の目の要素 背景
+  // 2つ目のsection 背景色
   &:nth-child(2) {
     background-color: mediumvioletred;
   }
-  // 3つ目の目の要素 背景
+  // 3つ目のsection 背景色
   &:nth-child(3) {
     background-color: orange;
   }
