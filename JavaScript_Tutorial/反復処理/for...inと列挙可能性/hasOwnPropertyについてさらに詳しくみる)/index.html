@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>テキスト１</p>
+    <p>テキスト２</p>
+    <p>テキスト３</p>
+
+    <!-- こんな感じでpタグで囲んだ文を3つ用意する -->
+    <script>
+      /*
+    下記の記事を参考に実際に自分でコードを書いて確かめてみた
+    https://www.sejuku.net/blog/20116#index_id6
+    */
+
+      const p1 = document.getElementsByTagName('p'); // pタグで囲んだ要素を取得する
+      //getElementsByTagName('タグ名')は、()の中に指定した、タグの要素を取得するプロパティ
+
+      console.log(p1);
+      // HTML要素を取得した場合には「HTMLCollection」というオブジェクトが持つ機能を継承している
+      // なのでこのままfor..in文を使うと...?
+      const p2 = document.getElementsByTagName('p');
+
+      for (const item in p2) {
+        console.log(p2[item]);
+      }
+
+      //コンソールを見てみよう
+
+      /*
+      <p>テキスト１</p>
+      <p>テキスト２</p>
+      <p>テキスト３</p>
+      3
+      function item() { [native code] } 
+      function namedItem() { [native code] }
+      */
+
+      // for..in文を使ってp要素だけを取得したかったのにp要素以外にもいくつか継承されている機能が列挙されているのが分かる
+
+      /*
+      ここで、「for – in文」の繰り返し処理の中で、
+      継承元のプロパティかどうかを条件分岐することで必要なプロパティだけを抽出する方法である
+      hasOwnPropertyを使ってみよう！
+      */
+
+      const p3 = document.getElementsByTagName('p');
+
+      for (const item in p3) {
+        // そのオブジェクトの直接のプロパティのみを取得する
+        if (p3.hasOwnProperty(item)) {
+          console.log(p3[item]);
+        }
+      }
+
+      // コンソールを見てみよう
+
+      /*
+      <p>テキスト１</p>
+      <p>テキスト２</p>
+      <p>テキスト３</p>
+      */
+
+      // pタグの要素のみ取得できるように制御されているのがわかる
+
+      // もう一つやり方を見てみよう
+      // もう1つ、継承を意識しない書き方として「Object.keys()」を使う方法がある
+
+      const p4 = document.getElementsByTagName('p');
+
+      //プロパティのみを取得する
+      const keys = Object.keys(p4);
+
+      for (const item in keys) {
+        console.log(p4[item]);
+      }
+
+      // これもしっかりpタグのみ出力されている
+
+      // forEach文でも使える
+      const p5 = document.getElementsByTagName('p');
+
+      Object.keys(p5).forEach((value) => {
+        // ここで即時関数をアロー関数の形式に書き換えているのに特に理由はない、使ってみたかっただけ
+        console.log(p5[value]);
+      });
+    </script>
+  </body>
+</html>
