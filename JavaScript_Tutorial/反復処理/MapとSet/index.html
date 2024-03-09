@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MapとSet</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>MapとSetとは？</h1>
+    データを管理する入れ物と考えるとよい
+    <h5>これら二つはES6で追加された</h5>
+
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>Object</td>
+          <td>VS</td>
+          <td>Map</td>
+        </tr>
+        <tr>
+          <td>キー</td>
+          <td>文字列</td>
+          <td></td>
+          <td>制約なし</td>
+        </tr>
+        <tr>
+          <td>for...in</td>
+          <td>可能</td>
+          <td></td>
+          <td>不可能</td>
+        </tr>
+        <tr>
+          <td>for...of</td>
+          <td>不可能</td>
+          <td></td>
+          <td>可能</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <br />
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>Array</td>
+          <td>VS</td>
+          <td>Set</td>
+        </tr>
+        <tr>
+          <td>重複値</td>
+          <td>●</td>
+          <td></td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>for...in</td>
+          <td>●</td>
+          <td></td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>for...of</td>
+          <td>●</td>
+          <td></td>
+          <td>●</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
