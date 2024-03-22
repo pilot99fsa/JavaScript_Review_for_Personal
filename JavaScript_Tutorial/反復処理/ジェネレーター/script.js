@@ -37,6 +37,7 @@ function* genFunc() {
     return 3;
 }
 
+// it.next()を呼ぶことで
 const it = genFunc()
 console.log(it.next())
 console.log(it.next())
