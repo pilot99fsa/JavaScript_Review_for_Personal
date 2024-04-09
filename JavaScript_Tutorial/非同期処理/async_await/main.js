@@ -1,12 +1,13 @@
 function sleep(val) {
-  return new Promise(function(resolve) {
-    setTimeout(function() {
+  return new Promise(function (resolve) {
+    setTimeout(function () {
       console.log(val++);
       resolve(val);
     }, 1000);
   });
 }
 
+// Asyncを使う場合は、functionの前にAsyncを付け加える
 async function init() {
   let val = await sleep(0);
   val = await sleep(val);
@@ -17,9 +18,9 @@ async function init() {
   return val;
 }
 
-init().then(function(val) {
+init().then(function (val) {
   console.log('hello' + val)
-}).catch(function(e) {
+}).catch(function (e) {
   console.error(e);
 });
 // console.log(init())
