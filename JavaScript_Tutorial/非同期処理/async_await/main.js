@@ -14,12 +14,17 @@ async function init() {
   val = await sleep(val);
   val = await sleep(val);
   val = await sleep(val);
+  // Awawit付け加えられた関数は必ず非同期で処理される
   throw new Error();
   return val;
 }
 
+// Awaitを使った関数ははグローバルコンテキストでは使えない。Asyncを付け加えた関数コンテキストの中でしか使えないことに留意すること。
+
+// Asyncをつけて実行した関数はPromiseのインスタンスを反す。よってthenメソッドを繋ぐことも可能である
 init().then(function (val) {
   console.log('hello' + val)
+  // throwが呼ばれたら、cathcメソッドも実行できる
 }).catch(function (e) {
   console.error(e);
 });
