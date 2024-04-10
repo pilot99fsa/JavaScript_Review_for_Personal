@@ -61,5 +61,8 @@ async function fetchUsers() { // まずasyncをfunctionの前に付け加えた�
         console.log(`I'm ${user.name}, ${user.age} ysers old`)
     }
 }
+
+fetchUsers()
+
 // response.json()の戻り値は、Promiseであることを忘れないようにしよう
 // Fetch APiの利点は、XMLHttpRequestを使うよりはシンプルであり、jQuery.ajaxやaxios.getのようにライブラリに依存しないことである
