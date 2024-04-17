@@ -42,4 +42,6 @@ const tom = {
     }
 }
 tom.hello
-Reflect.get
+// Reflect.get(tom, 'hello', receiver)
+Reflect.get(tom, 'hello', bob)
+Reflect.get(tom, 'hello')
